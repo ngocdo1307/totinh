@@ -1,0 +1,91 @@
+body {
+  background: white;
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+  padding-top: 50px;
+}
+
+h1 {
+  color: #f06292;
+  text-shadow: 2px 2px #ffb6c1;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin: 20px;
+}
+
+#troll-text {
+  font-size: 26px; /* Tăng kích thước chữ */
+  color: #f06292;  /* Màu hồng nổi bật */
+  text-shadow: 1px 1px #ffb6c1; /* Đổ bóng dễ thương */
+  font-weight: bold; /* Đậm hơn */
+  margin-bottom: 20px;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
+  background: #f06292;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ec407a;
+}
+#type-text {
+  font-size: 18px;
+  color: #77DD77;
+  text-shadow: 1px 1px #ACE1AF;
+  font-weight: bold;
+  margin-top: 20px;
+
+  white-space: pre-line;   /* Bảo toàn xuống dòng trong template */
+  word-wrap: break-word;   /* Ngắt từ dài */
+  max-width: 90%;          /* Không tràn màn hình nhỏ */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;        /* căn giữa */
+  line-height: 1.5;        /* Cho dễ đọc */
+}
+
+.hidden {
+  display: none;
+}
+
+#zalo-link button {
+  background: #25A1DD; /* Xanh Zalo */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#zalo-link button:hover {
+  background: #1282B5;
+}

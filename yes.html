@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>💖 Yêu rồi nhé! 💖</title>
+  <!-- Nếu muốn font đẹp -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🥰 Em đồng ý rồi! 🥰</h1>
+    <img src="cute1.gif" alt="Cute" />
+    <p>💘 Yêu em nhiều lắm 💘</p>
+
+    <!-- Nút bật nhạc -->
+    <button id="play-music">LÊN NHẠC</button>
+
+    <!-- Vùng hiện chữ gõ từng chữ -->
+    <p id="type-text"></p>
+
+    <!-- Nút mở Zalo (ẩn trước) -->
+    <a id="zalo-link" href="https://zalo.me/0333222528" target="_blank" class="hidden">
+      <button>Gửi Tín Hiệu Yêu Thương 💌</button>
+    </a>
+  </div>
+
+  <!-- Nhạc yêu thương -->
+  <audio id="yes-music" src="music.mp3" loop></audio>
+
+  <script>
+    const btn = document.getElementById('play-music');
+    const audio = document.getElementById('yes-music');
+    const typeText = document.getElementById('type-text');
+    const zaloLink = document.getElementById('zalo-link');
+
+    btn.addEventListener('click', () => {
+      audio.play();
+      btn.style.display = 'none';
+      typeWriter(`Em à, anh không biết phải bắt đầu thế nào cho bớt sến, nhưng mà anh không giấu được nữa rồi. Anh thích em – thích nhiều đến mức chỉ cần nghe giọng em thôi cũng đủ làm anh cười cả ngày. Anh không hứa sẽ cho em mọi thứ em muốn, Anh không hứa sẽ làm em cười mỗi ngày. Nhưng anh hứa sẽ cho em mọi thứ anh có. Làm bạn gái anh nhé? Cho anh được ở cạnh em, để mỗi sáng thức dậy điều đầu tiên anh thấy là em.
+
+Khi nào em sẵn sàng hãy gửi tín hiệu cho anh biết nhé ❤️`, typeText, 100, () => {
+        zaloLink.classList.remove('hidden');
+      });
+    });
+
+    function typeWriter(text, element, speed, callback) {
+      let i = 0;
+      const timer = setInterval(() => {
+        if (i < text.length) {
+          element.textContent += text.charAt(i);
+          i++;
+        } else {
+          clearInterval(timer);
+          if (callback) callback();
+        }
+      }, speed);
+    }
+  </script>
+</body>
+</html>
