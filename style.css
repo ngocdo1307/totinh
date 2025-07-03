@@ -89,3 +89,21 @@ button:hover {
 #zalo-link button:hover {
   background: #1282B5;
 }
+.heart {
+  position: fixed;
+  font-size: 26px;
+  pointer-events: none;
+  z-index: 9999;
+  animation: floatUp 3s ease-out forwards;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200px) scale(1.5);
+    opacity: 0;
+  }
+}
