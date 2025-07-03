@@ -57,6 +57,34 @@ Khi nào em sẵn sàng hãy gửi tín hiệu cho anh biết nhé ❤️`, type
         }
       }, speed);
     }
+    function typeWriter(text, element, speed, callback) {
+      let i = 0;
+      const timer = setInterval(() => {
+        if (i < text.length) {
+          element.textContent += text.charAt(i);
+          i++;
+        } else {
+          clearInterval(timer);
+          if (callback) callback();
+        }
+      }, speed);
+    }
+
+  function createHeart() {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.textContent = '💖';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.top = Math.random() * 100 + 'vh';
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 3000);
+  }
+
+  // Tạo trái tim bay mỗi 300ms
+  setInterval(createHeart, 300);
   </script>
 </body>
 </html>
